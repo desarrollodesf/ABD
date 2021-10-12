@@ -1,0 +1,33 @@
+﻿@model MongoDBConnection.Models.Query
+
+@{
+    ViewData["Title"] = "Query1";
+}
+
+<h4>Query</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Query1">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="startPunto1" class="control-label"></label>
+                <input asp-for="startPunto1" class="form-control" />
+                <span asp-validation-for="startPunto1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="startPunto2" class="control-label"></label>
+                <input asp-for="startPunto2" class="form-control" />
+                <span asp-validation-for="startPunto2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

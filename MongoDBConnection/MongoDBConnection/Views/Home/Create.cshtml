@@ -1,0 +1,112 @@
+﻿@model Resultado
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<div class="text-center">
+    <div class="float-container">
+
+        <div class="float-child green">
+            <p><b>Punto 1: ¿Cuál es el estado con mayor tráfico de botes en un periodo dado? </b></p>
+            <label for="start">Fecha inicio </label>
+            <input type="date" id="startPunto1" name="startPunto1"
+                   value="2017-01-01"
+                   min="2017-01-01" max="2020-12-31">
+            <label for="start">Fecha Final </label>
+            <input type="date" id="endPunto1" name="endPunto1"
+                   value="2020-12-31"
+                   min="2017-01-01" max="2020-12-31">
+            <p></p>
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Create" class="btn btn-default" />
+                </div>
+            </div>
+
+            <br>
+            <br>
+            <br>
+            <br>
+        </div>
+        <div class="float-child white">
+            <p> <b>Punto 2: ¿Cuál es el tipo de carga más común por estado, en un periodo dado? </b></p>
+
+            <label for="start">Fecha inicio </label>
+            <input type="date" id="startPunto2" name="startPunto2"
+                   value="2017-01-01"
+                   min="2017-01-01" max="2020-12-31">
+            <label for="start">Fecha Final </label>
+            <input type="date" id="endPunto2" name="endPunto2"
+                   value="2020-12-31"
+                   min="2017-01-01" max="2020-12-31">
+            <p></p>
+            <a asp-controller="Resultado" asp-action="Resultado2">
+                <input type="button" value="Busqueda" onclick="Resultado2" />
+            </a>
+            <br>
+            <br>
+            <br>
+            <br>
+        </div>
+        <div class="float-child white">
+            <p><b>¿Qué tanto afectó la pandemia al tráfico de embarcaciones teniendo en cuenta el número de embarcaciones por mes en cada estado en años anteriores? </b></p>
+            <label for="start">Fecha inicio </label>
+            <p></p>
+            <a asp-controller="Resultado" asp-action="Resultado3">
+                <input type="button" value="Busqueda" onclick="Resultado3" />
+            </a>
+            <br>
+            <br>
+            <br>
+            <br>
+        </div>
+
+        <div class="float-child white">
+            <p><b>¿Cómo es la distribución geográfica, en un periodo dado, de las embarcaciones? (e.g. mapa de calor? </b></p>
+            <label for="start">Fecha inicio </label>
+            <input type="date" id="punto4start" name="startPunto4"
+                   value="2017-01-01"
+                   min="2017-01-01" max="2020-12-31">
+            <label for="start">Fecha Final </label>
+            <input type="date" id="punto4end" name="endPunto4"
+                   value="2020-12-31"
+                   min="2017-01-01" max="2020-12-31">
+            <p></p>
+            <a asp-controller="Resultado" asp-action="Resultado4">
+                <input type="button" value="Busqueda" onclick="Resultado4" />
+            </a>
+            <br>
+            <br>
+            <br>
+            <br>
+        </div>
+
+
+        <div class="float-child white">
+            <p><b>¿Existe alguna relación entre el día de la semana y el tipo de carga en cada estado?¿La relación cambia por año? </b></p>
+            <label for="start">Fecha inicio </label>
+            <input type="date" id="punto4start" name="startPunto5"
+                   value="2017-01-01"
+                   min="2017-01-01" max="2020-12-31">
+            <label for="start">Fecha Final </label>
+            <input type="date" id="punto4end" name="endPunto5"
+                   value="2020-12-31"
+                   min="2017-01-01" max="2020-12-31">
+            <p></p>
+            <a asp-controller="Resultado" asp-action="Resultado5">
+                <input type="button" value="Busqueda" onclick="Resultado5" />
+            </a>
+            <br>
+            <br>
+            <br>
+            <br>
+        </div>
+    </div>
+</div>
+
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
